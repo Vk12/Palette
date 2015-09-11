@@ -103,7 +103,7 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
         
     }
     
-    // Brings up action sheet with Camera button is tapped
+    // Brings up action sheet when Camera button is tapped
     @IBAction func onCameraButtonTapped(sender: UIButton) {
         showActionSheet(sender)
     }
@@ -121,36 +121,50 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
     
     func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int) {
         switch buttonIndex {
-        case 0: return
-        case 1:  // Presents ImagePicker allowing user to choose a photo from library
+            
+        case 0:
+            // Presents Camera
+            if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+                imagePicker.sourceType = .Camera
+                presentViewController(imagePicker, animated: true, completion: nil)
+            } else {
+                dump("Theres no camera on this phone")
+            }
+            
+        case 1:
+            // Presents ImagePicker allowing user to choose a photo from library
             imagePicker.allowsEditing = true
             imagePicker.sourceType = .PhotoLibrary
             presentViewController(imagePicker, animated: true, completion: nil)
-        default: // Cancel is default
+            
+        default:
+            // Cancel is default
             return
         }
     }
     
     // After image is chosen, extra colors from image 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        
+        // The chosen image
         if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
-            let color = CCColorCube()
             
-            let brightColorsFromImage = color.extractBrightColorsFromImage(pickedImage, avoidColor: nil, count: 60) as! [UIColor]
-            let darkColorsFromImage = color.extractDarkColorsFromImage(pickedImage, avoidColor: nil, count: 60) as! [UIColor]
+            // Initilizing the colorCube
+            let colorCube = CCColorCube()
+            
+            // Extracting bright and dark colors from image
+            let brightColorsFromImage = colorCube.extractBrightColorsFromImage(pickedImage, avoidColor: nil, count: 60) as! [UIColor]
+            let darkColorsFromImage = colorCube.extractDarkColorsFromImage(pickedImage, avoidColor: nil, count: 60) as! [UIColor]
         
+            // Dismisses ViewController
             self.dismissViewControllerAnimated(true, completion: nil)
             
+            // Instantiates DisplayColorsviewController, then presents it. Passing Array of colors and Image
             var vc = self.storyboard?.instantiateViewControllerWithIdentifier("displayColorsViewController") as! DisplayColorsViewController
             
             vc.colorsArray = brightColorsFromImage + darkColorsFromImage
             vc.image = pickedImage
             
             self.presentViewController(vc, animated: true, completion: nil)
-            
-        
-        
     }
     
     // Dismiss controller if canceled
@@ -159,6 +173,7 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
         }
     }
     
+    // Conversion to Hex from UIColor if necessary(Not in use)
     func hexStringFromColor(color:UIColor) -> String {
         
         let components = CGColorGetComponents(color.CGColor)
