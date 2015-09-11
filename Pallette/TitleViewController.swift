@@ -15,6 +15,8 @@ protocol TitleViewControllerDelegate {
 
 class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, UIImagePickerControllerDelegate {
 
+    @IBOutlet weak var segmentedControlContainer: UIView!
+    
     ///////////////////////////////////////////////////////////
     // MARK: Properties
     
@@ -30,6 +32,9 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
     // Colors Delegate
     let delegate: TitleViewControllerDelegate? = nil
     
+    // Segmented Controller
+    var segmentedControl = SegmentedControl()
+    
     ///////////////////////////////////////////////////////////
     // MARK: ViewController LifeCycle
     override func viewDidLoad() {
@@ -41,6 +46,9 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
         // Set delegates    
         imagePicker.delegate = self
         actionSheet.delegate = self
+        
+        // Initialize Segmented Controller with options
+        segmentedControl = SegmentedControl(items: ["All", "Bright", "Dark"], container: segmentedControlContainer)
     }
     
     
@@ -99,15 +107,14 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
         
         // Add animation on gradient
         gradient.addAnimation(animation, forKey: "animateGradient")
-        
-        
     }
     
     // Brings up action sheet when Camera button is tapped
     @IBAction func onCameraButtonTapped(sender: UIButton) {
         showActionSheet(sender)
     }
-    
+    ///////////////////////////////////////////////////////////
+    // MARK: ActionSheet Delegates
     func showActionSheet(sender: AnyObject!) {
         
         // Add buttons to action sheet
@@ -143,6 +150,9 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
         }
     }
     
+    ///////////////////////////////////////////////////////////
+    // MARK: ImagePickerDelegates
+    
     // After image is chosen, extra colors from image 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         // The chosen image
@@ -152,6 +162,7 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
             let colorCube = CCColorCube()
             
             // Extracting bright and dark colors from image
+            
             let brightColorsFromImage = colorCube.extractBrightColorsFromImage(pickedImage, avoidColor: nil, count: 60) as! [UIColor]
             let darkColorsFromImage = colorCube.extractDarkColorsFromImage(pickedImage, avoidColor: nil, count: 60) as! [UIColor]
         
@@ -161,7 +172,19 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
             // Instantiates DisplayColorsviewController, then presents it. Passing Array of colors and Image
             var vc = self.storyboard?.instantiateViewControllerWithIdentifier("displayColorsViewController") as! DisplayColorsViewController
             
-            vc.colorsArray = brightColorsFromImage + darkColorsFromImage
+            // Will only send colors wanted by user
+            switch segmentedControl.selectedSegmentIndex {
+            case 0:
+                vc.colorsArray = brightColorsFromImage + darkColorsFromImage
+                
+            case 1:
+                vc.colorsArray = brightColorsFromImage
+
+            default:
+                vc.colorsArray = darkColorsFromImage
+            }
+            
+            
             vc.image = pickedImage
             
             self.presentViewController(vc, animated: true, completion: nil)
@@ -171,20 +194,6 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
         }
-    }
-    
-    // Conversion to Hex from UIColor if necessary(Not in use)
-    func hexStringFromColor(color:UIColor) -> String {
-        
-        let components = CGColorGetComponents(color.CGColor)
-        
-        let r = components[0]
-        let g = components[1]
-        let b = components[2]
-        
-        var returnString = "#\(round(r * 255))\(round(g * 255))\(round(b * 255))"
-        
-        return returnString
     }
 }
 

@@ -12,4 +12,5 @@
 #import "AFNetworking.h"
 #import "CCColorCube.h"
 #import "CCLocalMaximum.h"
+#import "NYSegmentedControl.h"
 #endif

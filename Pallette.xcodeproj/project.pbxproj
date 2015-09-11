@@ -30,6 +30,11 @@
 		09458A6B1BA0D8360054B5B9 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 09458A5E1BA0D8360054B5B9 /* LICENSE.md */; };
 		09458A6C1BA0D8360054B5B9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09458A5F1BA0D8360054B5B9 /* README.md */; };
 		09458A6D1BA0D8360054B5B9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09458A5F1BA0D8360054B5B9 /* README.md */; };
+		09F40B851BA2CC7300D008C2 /* NYSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40B7E1BA2CC7300D008C2 /* NYSegment.m */; };
+		09F40B861BA2CC7300D008C2 /* NYSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40B801BA2CC7300D008C2 /* NYSegmentedControl.m */; };
+		09F40B871BA2CC7300D008C2 /* NYSegmentIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40B821BA2CC7300D008C2 /* NYSegmentIndicator.m */; };
+		09F40B881BA2CC7300D008C2 /* NYSegmentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F40B841BA2CC7300D008C2 /* NYSegmentLabel.m */; };
+		09F40B8A1BA2CD4600D008C2 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F40B891BA2CD4600D008C2 /* SegmentedControl.swift */; };
 		09F8CDD91BA273FB007AAB42 /* CCColorCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8CDD61BA273FB007AAB42 /* CCColorCube.m */; };
 		09F8CDDA1BA273FB007AAB42 /* CCColorCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8CDD61BA273FB007AAB42 /* CCColorCube.m */; };
 		09F8CDDB1BA273FB007AAB42 /* CCLocalMaximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8CDD81BA273FB007AAB42 /* CCLocalMaximum.m */; };
@@ -76,6 +81,15 @@
 		09458A5D1BA0D8360054B5B9 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Chameleon.m"; sourceTree = "<group>"; };
 		09458A5E1BA0D8360054B5B9 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		09458A5F1BA0D8360054B5B9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09F40B7D1BA2CC7300D008C2 /* NYSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYSegment.h; sourceTree = "<group>"; };
+		09F40B7E1BA2CC7300D008C2 /* NYSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYSegment.m; sourceTree = "<group>"; };
+		09F40B7F1BA2CC7300D008C2 /* NYSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYSegmentedControl.h; sourceTree = "<group>"; };
+		09F40B801BA2CC7300D008C2 /* NYSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYSegmentedControl.m; sourceTree = "<group>"; };
+		09F40B811BA2CC7300D008C2 /* NYSegmentIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYSegmentIndicator.h; sourceTree = "<group>"; };
+		09F40B821BA2CC7300D008C2 /* NYSegmentIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYSegmentIndicator.m; sourceTree = "<group>"; };
+		09F40B831BA2CC7300D008C2 /* NYSegmentLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYSegmentLabel.h; sourceTree = "<group>"; };
+		09F40B841BA2CC7300D008C2 /* NYSegmentLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYSegmentLabel.m; sourceTree = "<group>"; };
+		09F40B891BA2CD4600D008C2 /* SegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		09F8CDD51BA273FB007AAB42 /* CCColorCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCColorCube.h; sourceTree = "<group>"; };
 		09F8CDD61BA273FB007AAB42 /* CCColorCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCColorCube.m; sourceTree = "<group>"; };
 		09F8CDD71BA273FB007AAB42 /* CCLocalMaximum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocalMaximum.h; sourceTree = "<group>"; };
@@ -131,12 +145,9 @@
 				09458A281BA0D74A0054B5B9 /* AppDelegate.swift */,
 				09458A2D1BA0D74A0054B5B9 /* TitleViewController.swift */,
 				09458A4B1BA0D7DA0054B5B9 /* DisplayColorsViewController.swift */,
-				09458A321BA0D74A0054B5B9 /* Images.xcassets */,
-				09458A341BA0D74A0054B5B9 /* LaunchScreen.xib */,
-				09458A2A1BA0D74A0054B5B9 /* Pallette.xcdatamodeld */,
-				09458A261BA0D74A0054B5B9 /* Supporting Files */,
 				09458A4D1BA0D7F00054B5B9 /* ColorsCollectionViewCell.swift */,
-				09458A4F1BA0D80E0054B5B9 /* Palette-Bridging-Header.h */,
+				09458A261BA0D74A0054B5B9 /* Supporting Files */,
+				09F40B891BA2CD4600D008C2 /* SegmentedControl.swift */,
 			);
 			path = Pallette;
 			sourceTree = "<group>";
@@ -144,8 +155,10 @@
 		09458A261BA0D74A0054B5B9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				09F8CDD41BA273FB007AAB42 /* ColorCube */,
-				09458A501BA0D8360054B5B9 /* ChameleonFramework */,
+				09458A4F1BA0D80E0054B5B9 /* Palette-Bridging-Header.h */,
+				09458A341BA0D74A0054B5B9 /* LaunchScreen.xib */,
+				09458A2A1BA0D74A0054B5B9 /* Pallette.xcdatamodeld */,
+				09458A321BA0D74A0054B5B9 /* Images.xcassets */,
 				09458A271BA0D74A0054B5B9 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -175,7 +188,8 @@
 				09458A5E1BA0D8360054B5B9 /* LICENSE.md */,
 				09458A5F1BA0D8360054B5B9 /* README.md */,
 			);
-			path = ChameleonFramework;
+			name = ChameleonFramework;
+			path = Pallette/ChameleonFramework;
 			sourceTree = "<group>";
 		};
 		09458A511BA0D8360054B5B9 /* Chameleon */ = {
@@ -197,6 +211,22 @@
 			path = Chameleon;
 			sourceTree = "<group>";
 		};
+		09F40B7C1BA2CC7300D008C2 /* NYSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				09F40B7D1BA2CC7300D008C2 /* NYSegment.h */,
+				09F40B7E1BA2CC7300D008C2 /* NYSegment.m */,
+				09F40B7F1BA2CC7300D008C2 /* NYSegmentedControl.h */,
+				09F40B801BA2CC7300D008C2 /* NYSegmentedControl.m */,
+				09F40B811BA2CC7300D008C2 /* NYSegmentIndicator.h */,
+				09F40B821BA2CC7300D008C2 /* NYSegmentIndicator.m */,
+				09F40B831BA2CC7300D008C2 /* NYSegmentLabel.h */,
+				09F40B841BA2CC7300D008C2 /* NYSegmentLabel.m */,
+			);
+			name = NYSegmentedControl;
+			path = Pallette/NYSegmentedControl;
+			sourceTree = "<group>";
+		};
 		09F8CDD41BA273FB007AAB42 /* ColorCube */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +235,8 @@
 				09F8CDD71BA273FB007AAB42 /* CCLocalMaximum.h */,
 				09F8CDD81BA273FB007AAB42 /* CCLocalMaximum.m */,
 			);
-			path = ColorCube;
+			name = ColorCube;
+			path = Pallette/ColorCube;
 			sourceTree = "<group>";
 		};
 		2AC4F989A59B502F7052D063 /* Pods */ = {
@@ -220,6 +251,9 @@
 		D58C563FA6B6BBE355FA01F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09F40B7C1BA2CC7300D008C2 /* NYSegmentedControl */,
+				09F8CDD41BA273FB007AAB42 /* ColorCube */,
+				09458A501BA0D8360054B5B9 /* ChameleonFramework */,
 				5C0A670500991D430C61187E /* libPods.a */,
 			);
 			name = Frameworks;
@@ -363,13 +397,18 @@
 				09458A2E1BA0D74A0054B5B9 /* TitleViewController.swift in Sources */,
 				09458A661BA0D8360054B5B9 /* UIColor+CIELAB.m in Sources */,
 				09458A4E1BA0D7F00054B5B9 /* ColorsCollectionViewCell.swift in Sources */,
+				09F40B861BA2CC7300D008C2 /* NYSegmentedControl.m in Sources */,
 				09F8CDD91BA273FB007AAB42 /* CCColorCube.m in Sources */,
 				09458A641BA0D8360054B5B9 /* UIColor+Chameleon.m in Sources */,
+				09F40B8A1BA2CD4600D008C2 /* SegmentedControl.swift in Sources */,
 				09458A601BA0D8360054B5B9 /* ChameleonStatusBar.m in Sources */,
+				09F40B851BA2CC7300D008C2 /* NYSegment.m in Sources */,
 				09458A681BA0D8360054B5B9 /* UIViewController+Chameleon.m in Sources */,
 				09458A6C1BA0D8360054B5B9 /* README.md in Sources */,
 				09458A4C1BA0D7DA0054B5B9 /* DisplayColorsViewController.swift in Sources */,
+				09F40B881BA2CC7300D008C2 /* NYSegmentLabel.m in Sources */,
 				09458A2C1BA0D74A0054B5B9 /* Pallette.xcdatamodeld in Sources */,
+				09F40B871BA2CC7300D008C2 /* NYSegmentIndicator.m in Sources */,
 				09458A291BA0D74A0054B5B9 /* AppDelegate.swift in Sources */,
 				09458A621BA0D8360054B5B9 /* NSArray+Chameleon.m in Sources */,
 				09F8CDDB1BA273FB007AAB42 /* CCLocalMaximum.m in Sources */,
