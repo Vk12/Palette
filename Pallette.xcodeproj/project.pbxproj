@@ -310,6 +310,7 @@
 				TargetAttributes = {
 					09458A221BA0D74A0054B5B9 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = E2V48AYLA7;
 					};
 					09458A3A1BA0D74A0054B5B9 = {
 						CreatedOnToolsVersion = 6.4;
@@ -552,9 +553,12 @@
 			baseConfigurationReference = D1451DD50482984C7856C804 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pallette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/RostinK/Desktop/Pallette/Pallette/Palette-Bridging-Header.h";
 			};
 			name = Debug;
@@ -564,9 +568,12 @@
 			baseConfigurationReference = A0FE230AC9A71B69B6DE3A3F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pallette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/RostinK/Desktop/Pallette/Pallette/Palette-Bridging-Header.h";
 			};
 			name = Release;

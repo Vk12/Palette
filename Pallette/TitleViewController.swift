@@ -9,10 +9,6 @@
 import UIKit
 import Foundation
 
-protocol TitleViewControllerDelegate {
-    func sendColorsToDisplayColorsViewController(brightColors:[UIColor], darkColors: [UIColor])
-}
-
 class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var segmentedControlContainer: UIView!
@@ -28,9 +24,6 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
     
     // Image picker
     let imagePicker = UIImagePickerController()
-    
-    // Colors Delegate
-    let delegate: TitleViewControllerDelegate? = nil
     
     // Segmented Controller
     var segmentedControl = SegmentedControl()
@@ -76,6 +69,8 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
         // Add timer to the layer to change colors after two seconds
         var animationTimer = NSTimer.scheduledTimerWithTimeInterval(2.05, target: self, selector: "animateBackgroundGradient", userInfo: nil, repeats: true)
     }
+    
+    
     
     // Animates Gradient Layer to change colors
     func animateBackgroundGradient() {
@@ -133,6 +128,7 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
             // Presents Camera
             if UIImagePickerController.isSourceTypeAvailable(.Camera) {
                 imagePicker.sourceType = .Camera
+                imagePicker.allowsEditing = true
                 presentViewController(imagePicker, animated: true, completion: nil)
             } else {
                 dump("Theres no camera on this phone")
@@ -183,7 +179,6 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
             default:
                 vc.colorsArray = darkColorsFromImage
             }
-            
             
             vc.image = pickedImage
             
