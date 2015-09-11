@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Foundation
 
+protocol TitleViewControllerDelegate {
+    func sendColorsToDisplayColorsViewController(brightColors:[UIColor], darkColors: [UIColor])
+}
 
 class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigationControllerDelegate, UIPopoverControllerDelegate, UIImagePickerControllerDelegate {
-    
-    // API Request api
-    static let apiRequestNotification = "http://pictaculous.com/api/1.0/"
+
+    ///////////////////////////////////////////////////////////
+    // MARK: Properties
     
     // Gradient Layer placed over view
     let gradient = CAGradientLayer()
@@ -20,14 +24,21 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
     // Action sheet for photo
     let actionSheet = UIActionSheet()
     
+    // Image picker
     let imagePicker = UIImagePickerController()
     
+    // Colors Delegate
+    let delegate: TitleViewControllerDelegate? = nil
+    
+    ///////////////////////////////////////////////////////////
+    // MARK: ViewController LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Add initial Gradient
         addGradient()
         
+        // Set delegates    
         imagePicker.delegate = self
         actionSheet.delegate = self
     }
@@ -112,7 +123,7 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
         switch buttonIndex {
         case 0: return
         case 1:  // Presents ImagePicker allowing user to choose a photo from library
-            imagePicker.allowsEditing = false
+            imagePicker.allowsEditing = true
             imagePicker.sourceType = .PhotoLibrary
             presentViewController(imagePicker, animated: true, completion: nil)
         default: // Cancel is default
@@ -120,37 +131,46 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
         }
     }
     
+    // After image is chosen, extra colors from image 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            let data = UIImagePNGRepresentation(pickedImage)
+        
+        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            let color = CCColorCube()
             
-            let manager = AFHTTPRequestOperationManager()
+            let brightColorsFromImage = color.extractBrightColorsFromImage(pickedImage, avoidColor: nil, count: 60) as! [UIColor]
+            let darkColorsFromImage = color.extractDarkColorsFromImage(pickedImage, avoidColor: nil, count: 60) as! [UIColor]
+        
+            self.dismissViewControllerAnimated(true, completion: nil)
             
-            let parameter = ["image":data]
+            var vc = self.storyboard?.instantiateViewControllerWithIdentifier("displayColorsViewController") as! DisplayColorsViewController
             
-            manager.POST("http://pictaculous.com/api/1.0/", parameters: parameter,
-                
-                success: {(operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
-                    
-                    dump(responseObject.localizedDescription)},
-                
-                failure:{
-                    (operation: AFHTTPRequestOperation!,error: NSError!) in
-                    
-                    dump(error.localizedDescription)
-                    
-            })}
-        //            imageView.contentMode = .ScaleAspectFit
-        //            imageView.image = pickedImage
+            vc.colorsArray = brightColorsFromImage + darkColorsFromImage
+            vc.image = pickedImage
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+            
         
         
-        dismissViewControllerAnimated(true, completion: nil)
     }
     
+    // Dismiss controller if canceled
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
+    func hexStringFromColor(color:UIColor) -> String {
+        
+        let components = CGColorGetComponents(color.CGColor)
+        
+        let r = components[0]
+        let g = components[1]
+        let b = components[2]
+        
+        var returnString = "#\(round(r * 255))\(round(g * 255))\(round(b * 255))"
+        
+        return returnString
+    }
 }
 
 

@@ -72,12 +72,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJ1-SZ-sLy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape" translatesAutoresizingMaskIntoConstraints="NO" id="UJ1-SZ-sLy">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oxi-QG-y2A">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Oxi-QG-y2A">
                                 <rect key="frame" x="0.0" y="292" width="320" height="276"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yBA-8n-KCc">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="276" id="Ezz-Yi-t3C"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="yBA-8n-KCc">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -88,10 +92,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <size key="customSize" width="100" height="100"/>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -102,9 +107,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UJ1-SZ-sLy" firstAttribute="top" secondItem="7eE-Tm-VUt" secondAttribute="top" id="LM1-vD-cUW"/>
-                            <constraint firstAttribute="trailing" secondItem="UJ1-SZ-sLy" secondAttribute="trailing" id="Qo5-9n-ZCv"/>
-                            <constraint firstItem="UJ1-SZ-sLy" firstAttribute="leading" secondItem="7eE-Tm-VUt" secondAttribute="leading" id="yiR-em-heI"/>
+                            <constraint firstItem="UJ1-SZ-sLy" firstAttribute="leading" secondItem="7eE-Tm-VUt" secondAttribute="leading" id="EYG-k7-5WQ"/>
+                            <constraint firstItem="Oxi-QG-y2A" firstAttribute="top" secondItem="UJ1-SZ-sLy" secondAttribute="bottom" constant="8" symbolic="YES" id="G40-Ox-BTn"/>
+                            <constraint firstItem="UJ1-SZ-sLy" firstAttribute="trailing" secondItem="Oxi-QG-y2A" secondAttribute="trailing" id="Qsj-kb-Lmy"/>
+                            <constraint firstItem="Oxi-QG-y2A" firstAttribute="bottom" secondItem="Fgt-vc-pwb" secondAttribute="top" id="ZCc-ai-L4I"/>
+                            <constraint firstAttribute="trailing" secondItem="UJ1-SZ-sLy" secondAttribute="trailing" id="oUQ-8E-MmF"/>
+                            <constraint firstItem="Oxi-QG-y2A" firstAttribute="leading" secondItem="UJ1-SZ-sLy" secondAttribute="leading" id="ugV-jN-rp5"/>
+                            <constraint firstItem="UJ1-SZ-sLy" firstAttribute="top" secondItem="7eE-Tm-VUt" secondAttribute="top" id="yMJ-jN-lqS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -118,6 +127,7 @@
     </scenes>
     <resources>
         <image name="camera" width="25" height="19"/>
+        <image name="landscape" width="1280" height="720"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

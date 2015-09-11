@@ -30,6 +30,10 @@
 		09458A6B1BA0D8360054B5B9 /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 09458A5E1BA0D8360054B5B9 /* LICENSE.md */; };
 		09458A6C1BA0D8360054B5B9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09458A5F1BA0D8360054B5B9 /* README.md */; };
 		09458A6D1BA0D8360054B5B9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 09458A5F1BA0D8360054B5B9 /* README.md */; };
+		09F8CDD91BA273FB007AAB42 /* CCColorCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8CDD61BA273FB007AAB42 /* CCColorCube.m */; };
+		09F8CDDA1BA273FB007AAB42 /* CCColorCube.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8CDD61BA273FB007AAB42 /* CCColorCube.m */; };
+		09F8CDDB1BA273FB007AAB42 /* CCLocalMaximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8CDD81BA273FB007AAB42 /* CCLocalMaximum.m */; };
+		09F8CDDC1BA273FB007AAB42 /* CCLocalMaximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F8CDD81BA273FB007AAB42 /* CCLocalMaximum.m */; };
 		F6D9D5D9C2CF1F139EC1C94E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0A670500991D430C61187E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,10 @@
 		09458A5D1BA0D8360054B5B9 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Chameleon.m"; sourceTree = "<group>"; };
 		09458A5E1BA0D8360054B5B9 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		09458A5F1BA0D8360054B5B9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		09F8CDD51BA273FB007AAB42 /* CCColorCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCColorCube.h; sourceTree = "<group>"; };
+		09F8CDD61BA273FB007AAB42 /* CCColorCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCColorCube.m; sourceTree = "<group>"; };
+		09F8CDD71BA273FB007AAB42 /* CCLocalMaximum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocalMaximum.h; sourceTree = "<group>"; };
+		09F8CDD81BA273FB007AAB42 /* CCLocalMaximum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocalMaximum.m; sourceTree = "<group>"; };
 		5C0A670500991D430C61187E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FE230AC9A71B69B6DE3A3F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D1451DD50482984C7856C804 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +107,7 @@
 		09458A1A1BA0D74A0054B5B9 = {
 			isa = PBXGroup;
 			children = (
+				09458A2F1BA0D74A0054B5B9 /* Main.storyboard */,
 				09458A251BA0D74A0054B5B9 /* Pallette */,
 				09458A3E1BA0D74A0054B5B9 /* PalletteTests */,
 				09458A241BA0D74A0054B5B9 /* Products */,
@@ -121,12 +130,11 @@
 			children = (
 				09458A281BA0D74A0054B5B9 /* AppDelegate.swift */,
 				09458A2D1BA0D74A0054B5B9 /* TitleViewController.swift */,
-				09458A2F1BA0D74A0054B5B9 /* Main.storyboard */,
+				09458A4B1BA0D7DA0054B5B9 /* DisplayColorsViewController.swift */,
 				09458A321BA0D74A0054B5B9 /* Images.xcassets */,
 				09458A341BA0D74A0054B5B9 /* LaunchScreen.xib */,
 				09458A2A1BA0D74A0054B5B9 /* Pallette.xcdatamodeld */,
 				09458A261BA0D74A0054B5B9 /* Supporting Files */,
-				09458A4B1BA0D7DA0054B5B9 /* DisplayColorsViewController.swift */,
 				09458A4D1BA0D7F00054B5B9 /* ColorsCollectionViewCell.swift */,
 				09458A4F1BA0D80E0054B5B9 /* Palette-Bridging-Header.h */,
 			);
@@ -136,6 +144,7 @@
 		09458A261BA0D74A0054B5B9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				09F8CDD41BA273FB007AAB42 /* ColorCube */,
 				09458A501BA0D8360054B5B9 /* ChameleonFramework */,
 				09458A271BA0D74A0054B5B9 /* Info.plist */,
 			);
@@ -186,6 +195,17 @@
 				09458A5D1BA0D8360054B5B9 /* UIViewController+Chameleon.m */,
 			);
 			path = Chameleon;
+			sourceTree = "<group>";
+		};
+		09F8CDD41BA273FB007AAB42 /* ColorCube */ = {
+			isa = PBXGroup;
+			children = (
+				09F8CDD51BA273FB007AAB42 /* CCColorCube.h */,
+				09F8CDD61BA273FB007AAB42 /* CCColorCube.m */,
+				09F8CDD71BA273FB007AAB42 /* CCLocalMaximum.h */,
+				09F8CDD81BA273FB007AAB42 /* CCLocalMaximum.m */,
+			);
+			path = ColorCube;
 			sourceTree = "<group>";
 		};
 		2AC4F989A59B502F7052D063 /* Pods */ = {
@@ -343,6 +363,7 @@
 				09458A2E1BA0D74A0054B5B9 /* TitleViewController.swift in Sources */,
 				09458A661BA0D8360054B5B9 /* UIColor+CIELAB.m in Sources */,
 				09458A4E1BA0D7F00054B5B9 /* ColorsCollectionViewCell.swift in Sources */,
+				09F8CDD91BA273FB007AAB42 /* CCColorCube.m in Sources */,
 				09458A641BA0D8360054B5B9 /* UIColor+Chameleon.m in Sources */,
 				09458A601BA0D8360054B5B9 /* ChameleonStatusBar.m in Sources */,
 				09458A681BA0D8360054B5B9 /* UIViewController+Chameleon.m in Sources */,
@@ -351,6 +372,7 @@
 				09458A2C1BA0D74A0054B5B9 /* Pallette.xcdatamodeld in Sources */,
 				09458A291BA0D74A0054B5B9 /* AppDelegate.swift in Sources */,
 				09458A621BA0D8360054B5B9 /* NSArray+Chameleon.m in Sources */,
+				09F8CDDB1BA273FB007AAB42 /* CCLocalMaximum.m in Sources */,
 				09458A6A1BA0D8360054B5B9 /* LICENSE.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +381,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F8CDDC1BA273FB007AAB42 /* CCLocalMaximum.m in Sources */,
+				09F8CDDA1BA273FB007AAB42 /* CCColorCube.m in Sources */,
 				09458A631BA0D8360054B5B9 /* NSArray+Chameleon.m in Sources */,
 				09458A671BA0D8360054B5B9 /* UIColor+CIELAB.m in Sources */,
 				09458A611BA0D8360054B5B9 /* ChameleonStatusBar.m in Sources */,
@@ -387,6 +411,7 @@
 				09458A301BA0D74A0054B5B9 /* Base */,
 			);
 			name = Main.storyboard;
+			path = Pallette;
 			sourceTree = "<group>";
 		};
 		09458A341BA0D74A0054B5B9 /* LaunchScreen.xib */ = {

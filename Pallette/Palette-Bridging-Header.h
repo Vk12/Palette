@@ -10,5 +10,6 @@
 #define Pallette_Palette_Bridging_Header_h
 #import "Chameleon.h"
 #import "AFNetworking.h"
-
+#import "CCColorCube.h"
+#import "CCLocalMaximum.h"
 #endif
