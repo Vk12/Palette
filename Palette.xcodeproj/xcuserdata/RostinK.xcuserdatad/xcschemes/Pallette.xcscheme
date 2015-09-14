@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09458A221BA0D74A0054B5B9"
-               BuildableName = "Pallette.app"
-               BlueprintName = "Pallette"
-               ReferencedContainer = "container:Pallette.xcodeproj">
+               BuildableName = "Palette.app"
+               BlueprintName = "Palette"
+               ReferencedContainer = "container:Palette.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09458A3A1BA0D74A0054B5B9"
-               BuildableName = "PalletteTests.xctest"
-               BlueprintName = "PalletteTests"
-               ReferencedContainer = "container:Pallette.xcodeproj">
+               BuildableName = "PaletteTests.xctest"
+               BlueprintName = "PaletteTests"
+               ReferencedContainer = "container:Palette.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "09458A3A1BA0D74A0054B5B9"
-               BuildableName = "PalletteTests.xctest"
-               BlueprintName = "PalletteTests"
-               ReferencedContainer = "container:Pallette.xcodeproj">
+               BuildableName = "PaletteTests.xctest"
+               BlueprintName = "PaletteTests"
+               ReferencedContainer = "container:Palette.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09458A221BA0D74A0054B5B9"
-            BuildableName = "Pallette.app"
-            BlueprintName = "Pallette"
-            ReferencedContainer = "container:Pallette.xcodeproj">
+            BuildableName = "Palette.app"
+            BlueprintName = "Palette"
+            ReferencedContainer = "container:Palette.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09458A221BA0D74A0054B5B9"
-            BuildableName = "Pallette.app"
-            BlueprintName = "Pallette"
-            ReferencedContainer = "container:Pallette.xcodeproj">
+            BuildableName = "Palette.app"
+            BlueprintName = "Palette"
+            ReferencedContainer = "container:Palette.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "09458A221BA0D74A0054B5B9"
-            BuildableName = "Pallette.app"
-            BlueprintName = "Pallette"
-            ReferencedContainer = "container:Pallette.xcodeproj">
+            BuildableName = "Palette.app"
+            BlueprintName = "Palette"
+            ReferencedContainer = "container:Palette.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

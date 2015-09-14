@@ -76,16 +76,20 @@ class TitleViewController: UIViewController, UIActionSheetDelegate, UINavigation
     func animateBackgroundGradient() {
         
         // Creates new colors for animation after initial gradient
-        let color = UIColor(randomFlatColorOfShadeStyle: UIShadeStyle.Dark)
-        let darkColor = UIColor(complementaryFlatColorOf: color)
+        var color = UIColor(randomFlatColorOfShadeStyle: UIShadeStyle.Dark)
+        var darkColor = UIColor(complementaryFlatColorOf: color)
         
-        // Adding colors to the gradient array of colors
-        gradient.colors = [color.CGColor, darkColor.CGColor]
+        // Convert colors into CGColor
+        var cgColor = color.CGColor
+        var cgDarkColor = darkColor.CGColor
+        
+        cgColor = (arc4random_uniform(8) > 2 ? cgColor : gradient.colors[0]) as! CGColor
+        cgDarkColor = (arc4random_uniform(8) > 2 ? cgDarkColor : gradient.colors[1]) as! CGColor
         
         // Sets original Colors to new colors
         let fromColors = gradient.colors
         
-        let toColors = [color.CGColor, darkColor.CGColor]
+        let toColors = [cgColor, cgDarkColor]
         
         // Changes gradient to new colors
         gradient.colors = toColors

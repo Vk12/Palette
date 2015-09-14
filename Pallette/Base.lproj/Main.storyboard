@@ -8,7 +8,7 @@
         <!--Title View Controller-->
         <scene sceneID="jan-zR-8bl">
             <objects>
-                <viewController id="wZZ-1r-Ihr" customClass="TitleViewController" customModule="Pallette" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wZZ-1r-Ihr" customClass="TitleViewController" customModule="Palette" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qpZ-28-iKy"/>
                         <viewControllerLayoutGuide type="bottom" id="dcW-lK-Vnj"/>
@@ -76,7 +76,7 @@
         <!--Display Colors View Controller-->
         <scene sceneID="BfT-70-dVe">
             <objects>
-                <viewController storyboardIdentifier="displayColorsViewController" id="HpT-Lm-Sy8" customClass="DisplayColorsViewController" customModule="Pallette" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="displayColorsViewController" id="HpT-Lm-Sy8" customClass="DisplayColorsViewController" customModule="Palette" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bbA-SY-R9D"/>
                         <viewControllerLayoutGuide type="bottom" id="Fgt-vc-pwb"/>
@@ -101,7 +101,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="AQy-Ge-dm3" customClass="ColorsCollectionViewCell" customModule="Pallette" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="AQy-Ge-dm3" customClass="ColorsCollectionViewCell" customModule="Palette" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">

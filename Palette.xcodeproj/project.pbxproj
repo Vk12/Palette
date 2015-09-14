@@ -53,7 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09458A231BA0D74A0054B5B9 /* Pallette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pallette.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09458A231BA0D74A0054B5B9 /* Palette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Palette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09458A271BA0D74A0054B5B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09458A281BA0D74A0054B5B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09458A2B1BA0D74A0054B5B9 /* Pallette.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pallette.xcdatamodel; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		09458A301BA0D74A0054B5B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09458A321BA0D74A0054B5B9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		09458A351BA0D74A0054B5B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		09458A3B1BA0D74A0054B5B9 /* PalletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09458A3B1BA0D74A0054B5B9 /* PaletteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaletteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09458A401BA0D74A0054B5B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09458A411BA0D74A0054B5B9 /* PalletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalletteTests.swift; sourceTree = "<group>"; };
 		09458A4B1BA0D7DA0054B5B9 /* DisplayColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayColorsViewController.swift; sourceTree = "<group>"; };
@@ -133,8 +133,8 @@
 		09458A241BA0D74A0054B5B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				09458A231BA0D74A0054B5B9 /* Pallette.app */,
-				09458A3B1BA0D74A0054B5B9 /* PalletteTests.xctest */,
+				09458A231BA0D74A0054B5B9 /* Palette.app */,
+				09458A3B1BA0D74A0054B5B9 /* PaletteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,9 +262,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		09458A221BA0D74A0054B5B9 /* Pallette */ = {
+		09458A221BA0D74A0054B5B9 /* Palette */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09458A451BA0D74A0054B5B9 /* Build configuration list for PBXNativeTarget "Pallette" */;
+			buildConfigurationList = 09458A451BA0D74A0054B5B9 /* Build configuration list for PBXNativeTarget "Palette" */;
 			buildPhases = (
 				E8687E1FB9BCBE176D2181B1 /* Check Pods Manifest.lock */,
 				09458A1F1BA0D74A0054B5B9 /* Sources */,
@@ -276,14 +276,14 @@
 			);
 			dependencies = (
 			);
-			name = Pallette;
+			name = Palette;
 			productName = Pallette;
-			productReference = 09458A231BA0D74A0054B5B9 /* Pallette.app */;
+			productReference = 09458A231BA0D74A0054B5B9 /* Palette.app */;
 			productType = "com.apple.product-type.application";
 		};
-		09458A3A1BA0D74A0054B5B9 /* PalletteTests */ = {
+		09458A3A1BA0D74A0054B5B9 /* PaletteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 09458A481BA0D74A0054B5B9 /* Build configuration list for PBXNativeTarget "PalletteTests" */;
+			buildConfigurationList = 09458A481BA0D74A0054B5B9 /* Build configuration list for PBXNativeTarget "PaletteTests" */;
 			buildPhases = (
 				09458A371BA0D74A0054B5B9 /* Sources */,
 				09458A381BA0D74A0054B5B9 /* Frameworks */,
@@ -294,9 +294,9 @@
 			dependencies = (
 				09458A3D1BA0D74A0054B5B9 /* PBXTargetDependency */,
 			);
-			name = PalletteTests;
+			name = PaletteTests;
 			productName = PalletteTests;
-			productReference = 09458A3B1BA0D74A0054B5B9 /* PalletteTests.xctest */;
+			productReference = 09458A3B1BA0D74A0054B5B9 /* PaletteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -318,7 +318,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 09458A1E1BA0D74A0054B5B9 /* Build configuration list for PBXProject "Pallette" */;
+			buildConfigurationList = 09458A1E1BA0D74A0054B5B9 /* Build configuration list for PBXProject "Palette" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -331,8 +331,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09458A221BA0D74A0054B5B9 /* Pallette */,
-				09458A3A1BA0D74A0054B5B9 /* PalletteTests */,
+				09458A221BA0D74A0054B5B9 /* Palette */,
+				09458A3A1BA0D74A0054B5B9 /* PaletteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -439,7 +439,7 @@
 /* Begin PBXTargetDependency section */
 		09458A3D1BA0D74A0054B5B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 09458A221BA0D74A0054B5B9 /* Pallette */;
+			target = 09458A221BA0D74A0054B5B9 /* Palette */;
 			targetProxy = 09458A3C1BA0D74A0054B5B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -557,7 +557,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pallette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Palette;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/RostinK/Desktop/Pallette/Pallette/Palette-Bridging-Header.h";
 			};
@@ -572,7 +572,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Pallette/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Palette;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/RostinK/Desktop/Pallette/Pallette/Palette-Bridging-Header.h";
 			};
@@ -592,7 +592,7 @@
 				);
 				INFOPLIST_FILE = PalletteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PaletteTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pallette.app/Pallette";
 			};
 			name = Debug;
@@ -607,7 +607,7 @@
 				);
 				INFOPLIST_FILE = PalletteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PaletteTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pallette.app/Pallette";
 			};
 			name = Release;
@@ -615,7 +615,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		09458A1E1BA0D74A0054B5B9 /* Build configuration list for PBXProject "Pallette" */ = {
+		09458A1E1BA0D74A0054B5B9 /* Build configuration list for PBXProject "Palette" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09458A431BA0D74A0054B5B9 /* Debug */,
@@ -624,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09458A451BA0D74A0054B5B9 /* Build configuration list for PBXNativeTarget "Pallette" */ = {
+		09458A451BA0D74A0054B5B9 /* Build configuration list for PBXNativeTarget "Palette" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09458A461BA0D74A0054B5B9 /* Debug */,
@@ -633,7 +633,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		09458A481BA0D74A0054B5B9 /* Build configuration list for PBXNativeTarget "PalletteTests" */ = {
+		09458A481BA0D74A0054B5B9 /* Build configuration list for PBXNativeTarget "PaletteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				09458A491BA0D74A0054B5B9 /* Debug */,
