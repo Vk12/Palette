@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Pallette
 //
-//  Created by Rostin Kohnechi on 9/9/15.
+//  Created by Vala Kohnechi on 9/9/15.
 //  Copyright (c) 2015 Vala Kohnechi. All rights reserved.
 //
 

@@ -83,6 +83,8 @@ class DisplayColorsViewController: UIViewController, UICollectionViewDataSource,
         }
         
     }
+    
+    // Dismisses VC when X pressed
     @IBAction func dismissDisplayColorsViewControllerOnTap(sender: AnyObject) {
         
          dismissViewControllerAnimated(true, completion: nil)
